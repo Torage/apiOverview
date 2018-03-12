@@ -1,0 +1,3120 @@
+[
+  {
+    "name": "2.2.1. get available resources",
+    "page": 88,
+    "call": "GET /oapi/v1",
+    "responses": [
+      {
+        "HTTP Code": "default",
+        "Description": "success",
+        "Schema": "Section 2.3.5, unversioned.APIResourceList"
+      }
+    ],
+    "consumes": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+    ],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.2. list objects of kind AppliedClusterResourceQuota",
+    "page": 89,
+    "call": "GET /oapi/v1/appliedclusterresourcequotas",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "labelSelector",
+        "Description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "fieldSelector",
+        "Description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "watch",
+        "Description": "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "resourceVersion",
+        "Description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "timeoutSeconds",
+        "Description": "Timeout for the list/watch call.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.15, “v1.AppliedClusterResourceQuotaList” "
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf",
+      "application/json;stream=watch",
+      "application/vnd.kubernetes.protobuf;stream=watch"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.3. list or watch objects of kind BuildConfig",
+    "page": 91,
+    "call": "GET /oapi/v1/buildconfigs",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "labelSelector",
+        "Description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "fieldSelector",
+        "Description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "watch",
+        "Description": "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "resourceVersion",
+        "Description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "timeoutSeconds",
+        "Description": "Timeout for the list/watch call.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.15, “v1.AppliedClusterResourceQuotaList” "
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf",
+      "application/json;stream=watch",
+      "application/vnd.kubernetes.protobuf;stream=watch"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.5. list or watch objects of kind Build",
+    "page": 93,
+    "call": "GET /oapi/v1/builds",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "labelSelector",
+        "Description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "fieldSelector",
+        "Description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "watch",
+        "Description": "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "resourceVersion",
+        "Description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "timeoutSeconds",
+        "Description": "Timeout for the list/watch call.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.25, “v1.BuildList” "
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf",
+      "application/json;stream=watch",
+      "application/vnd.kubernetes.protobuf;stream=watch"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.8. list or watch objects of kind ClusterNetwork",
+    "page": 98,
+    "call": "GET /oapi/v1/clusternetworks",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "labelSelector",
+        "Description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "fieldSelector",
+        "Description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "watch",
+        "Description": "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "resourceVersion",
+        "Description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "timeoutSeconds",
+        "Description": "Timeout for the list/watch call.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.43, “v1.ClusterNetworkList”"
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf",
+      "application/json;stream=watch",
+      "application/vnd.kubernetes.protobuf;stream=watch"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.12. read the specified ClusterNetwork",
+    "page": 104,
+    "call": "GET /oapi/v1/clusternetworks/{name}",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "export",
+        "Description": "Should this value be exported. Export strips fields that a user can not specify. ",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "exact",
+        "Description": "Should the export be exact. Exact export maintains clusterspecific fields like 'Namespace' ",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "name",
+        "Description": "name of the ClusterNetwork",
+        "Required": "true",
+        "Schema": "string",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.42, “v1.ClusterNetwork” "
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.15. list or watch objects of kind ClusterPolicy",
+    "page": 109,
+    "call": "GET /oapi/v1/clusterpolicies",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "labelSelector",
+        "Description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "fieldSelector",
+        "Description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "watch",
+        "Description": "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "resourceVersion",
+        "Description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "timeoutSeconds",
+        "Description": "Timeout for the list/watch call.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.47, “v1.ClusterPolicyList”"
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf",
+      "application/json;stream=watch",
+      "application/vnd.kubernetes.protobuf;stream=watch"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.19. read the specified ClusterPolicy",
+    "page": 115,
+    "call": "GET /oapi/v1/clusterpolicies/{name}",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "export",
+        "Description": "Should this value be exported. Export strips fields that a user can not specify.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "exact",
+        "Description": "Should the export be exact. Exact export maintains clusterspecific fields like 'Namespace'",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "PathParameter",
+        "Name": "name",
+        "Description": "name of the ClusterPolicy",
+        "Required": "true",
+        "Schema": "string",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.44, “v1.ClusterPolicy”"
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.22. list or watch objects of kind ClusterPolicyBinding",
+    "page": 119,
+    "call": "GET /oapi/v1/clusterpolicybindings",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "labelSelector",
+        "Description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "fieldSelector",
+        "Description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "watch",
+        "Description": "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "resourceVersion",
+        "Description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "timeoutSeconds",
+        "Description": "Timeout for the list/watch call.",
+        "Required": "false",
+        "Schema": "integer",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.46, “v1.ClusterPolicyBindingList”"
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf",
+      "application/json;stream=watch",
+      "application/vnd.kubernetes.protobuf;stream=watch"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.26. read the specified ClusterPolicyBinding",
+    "page": 125,
+    "call": "GET /oapi/v1/clusterpolicybindings/{name}",
+    "parameters": [
+      {
+        "Type": "QueryParameter",
+        "Name": "pretty",
+        "Description": "If 'true', then the output is pretty printed.",
+        "Required": "false",
+        "Schema": "string",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "export",
+        "Description": "Should this value be exported. Export strips fields that a user can not specify.",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "QueryParameter",
+        "Name": "exact",
+        "Description": "Should the export be exact. Exact export maintains clusterspecific fields like 'Namespace'",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      },
+      {
+        "Type": "PathParameter",
+        "Name": "name",
+        "Description": "name of the ClusterPolicyBinding",
+        "Required": "false",
+        "Schema": "boolean",
+        "Default": ""
+      }
+    ],
+    "responses": [
+      {
+        "HTTP Code": 200,
+        "Description": "success",
+        "Schema": "Section 2.3.45, “v1.ClusterPolicyBinding”"
+      }
+    ],
+    "consumes": [],
+    "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+    ],
+    "tags": "oapiv1"
+  },
+  {
+    "name": "2.2.29. list or watch objects of kind ClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterresourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.33. read the specified ClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterresourcequotas/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.36. read status of the specified ClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterresourcequotas/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.38. list objects of kind ClusterRoleBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterrolebindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.42. read the specified ClusterRoleBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterrolebindings/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.44. list objects of kind ClusterRole",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterroles",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.48. read the specified ClusterRole",
+    "page": 0,
+    "call": "GET /oapi/v1/clusterroles/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.51. list or watch objects of kind DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/deploymentconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.53. list or watch objects of kind EgressNetworkPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/egressnetworkpolicies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.56. list or watch objects of kind Group",
+    "page": 0,
+    "call": "GET /oapi/v1/groups",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.60. read the specified Group",
+    "page": 0,
+    "call": "GET /oapi/v1/groups/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.63. list or watch objects of kind HostSubnet",
+    "page": 0,
+    "call": "GET /oapi/v1/hostsubnets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.67. read the specified HostSubnet",
+    "page": 0,
+    "call": "GET /oapi/v1/hostsubnets/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.70. list or watch objects of kind Identity",
+    "page": 0,
+    "call": "GET /oapi/v1/identities",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.74. read the specified Identity",
+    "page": 0,
+    "call": "GET /oapi/v1/identities/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.77. list or watch objects of kind Image",
+    "page": 0,
+    "call": "GET /oapi/v1/images",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.81. read the specified Image",
+    "page": 0,
+    "call": "GET /oapi/v1/images/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.87. list or watch objects of kind ImageStream",
+    "page": 0,
+    "call": "GET /oapi/v1/imagestreams",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.89. list objects of kind ImageStreamTag",
+    "page": 0,
+    "call": "GET /oapi/v1/imagestreamtags",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.93. list objects of kind AppliedClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/appliedclusterresourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.94. read the specified AppliedClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/appliedclusterresourcequotas/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.96. list or watch objects of kind BuildConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/buildconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.100. read the specified BuildConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/buildconfigs/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.107. list or watch objects of kind Build",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/builds",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.111. read the specified Build",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/builds/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.115. read log of the specified BuildLog",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/builds/{name}/log",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.118. list or watch objects of kind DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/deploymentconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.122. read the specified DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/deploymentconfigs/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.125. read log of the specified DeploymentLog",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/deploymentconfigs/{name}/log",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.128. read scale of the specified Scale",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/deploymentconfigs/{name}/scale",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.132. list or watch objects of kind EgressNetworkPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/egressnetworkpolicies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.136. read the specified EgressNetworkPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/egressnetworkpolicies/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.138. read the specified DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/generatedeploymentconfigs/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.139. read the specified ImageStreamImage",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/imagestreamimages/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.143. list or watch objects of kind ImageStream",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/imagestreams",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.147. read the specified ImageStream",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/imagestreams/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.149. read secrets of the specified SecretList",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/imagestreams/{name}/secrets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.151. list objects of kind ImageStreamTag",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/imagestreamtags",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.155. read the specified ImageStreamTag",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/imagestreamtags/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.163. list or watch objects of kind Policy",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/policies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.167. read the specified Policy",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/policies/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.170. list or watch objects of kind PolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/policybindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.174. read the specified PolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/policybindings/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.179. list or watch objects of kind RoleBindingRestriction",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/rolebindingrestrictions",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.183. read the specified RoleBindingRestriction",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/rolebindingrestrictions/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.185. list objects of kind RoleBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/rolebindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.189. read the specified RoleBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/rolebindings/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.191. list objects of kind Role",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/roles",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.195. read the specified Role",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/roles/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.198. list or watch objects of kind Route",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/routes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.202. read the specified Route",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/routes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.209. list or watch objects of kind Template",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/templates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.213. read the specified Template",
+    "page": 0,
+    "call": "GET /oapi/v1/namespaces/{namespace}/templates/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.216. list or watch objects of kind NetNamespace",
+    "page": 0,
+    "call": "GET /oapi/v1/netnamespaces",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.220. read the specified NetNamespace",
+    "page": 0,
+    "call": "GET /oapi/v1/netnamespaces/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.223. list or watch objects of kind OAuthAccessToken",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthaccesstokens",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.227. read the specified OAuthAccessToken",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthaccesstokens/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.230. list or watch objects of kind OAuthAuthorizeToken",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthauthorizetokens",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.234. read the specified OAuthAuthorizeToken",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthauthorizetokens/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.237. list or watch objects of kind OAuthClientAuthorization",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthclientauthorizations",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.241. read the specified OAuthClientAuthorization",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthclientauthorizations/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.244. list or watch objects of kind OAuthClient",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthclients",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.248. read the specified OAuthClient",
+    "page": 0,
+    "call": "GET /oapi/v1/oauthclients/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.253. list or watch objects of kind Policy",
+    "page": 0,
+    "call": "GET /oapi/v1/policies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.255. list or watch objects of kind PolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/policybindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.258. list objects of kind ProjectRequest",
+    "page": 0,
+    "call": "GET /oapi/v1/projectrequests",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.260. list or watch objects of kind Project",
+    "page": 0,
+    "call": "GET /oapi/v1/projects",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.264. read the specified Project",
+    "page": 0,
+    "call": "GET /oapi/v1/projects/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.267. list or watch objects of kind RoleBindingRestriction",
+    "page": 0,
+    "call": "GET /oapi/v1/rolebindingrestrictions",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.269. list objects of kind RoleBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/rolebindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.271. list objects of kind Role",
+    "page": 0,
+    "call": "GET /oapi/v1/roles",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.273. list or watch objects of kind Route",
+    "page": 0,
+    "call": "GET /oapi/v1/routes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.278. list or watch objects of kind Template",
+    "page": 0,
+    "call": "GET /oapi/v1/templates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.283. read the specified UserIdentityMapping",
+    "page": 0,
+    "call": "GET /oapi/v1/useridentitymappings/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.286. list or watch objects of kind User",
+    "page": 0,
+    "call": "GET /oapi/v1/users",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.290. read the specified User",
+    "page": 0,
+    "call": "GET /oapi/v1/users/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.292. watch individual changes to a list of BuildConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/buildconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.293. watch individual changes to a list of Build",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/builds",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.294. watch individual changes to a list of ClusterNetwork",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusternetworks",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.295. watch changes to an object of kind ClusterNetwork",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusternetworks/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.296. watch individual changes to a list of ClusterPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusterpolicies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.297. watch changes to an object of kind ClusterPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusterpolicies/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.298. watch individual changes to a list of ClusterPolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusterpolicybindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.299. watch changes to an object of kind ClusterPolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusterpolicybindings/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.300. watch individual changes to a list of ClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusterresourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.301. watch changes to an object of kind ClusterResourceQuota",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/clusterresourcequotas/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.302. watch individual changes to a list of DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/deploymentconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.303. watch individual changes to a list of EgressNetworkPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/egressnetworkpolicies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.304. watch individual changes to a list of Group",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/groups",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.305. watch changes to an object of kind Group",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/groups/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.306. watch individual changes to a list of HostSubnet",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/hostsubnets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.307. watch changes to an object of kind HostSubnet",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/hostsubnets/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.308. watch individual changes to a list of Identity",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/identities",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.309. watch changes to an object of kind Identity",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/identities/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.310. watch individual changes to a list of Image",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/images",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.311. watch changes to an object of kind Image",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/images/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.312. watch individual changes to a list of ImageStream",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/imagestreams",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.313. watch individual changes to a list of BuildConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/buildconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.314. watch changes to an object of kind BuildConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/buildconfigs/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.315. watch individual changes to a list of Build",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/builds",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.316. watch changes to an object of kind Build",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/builds/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.317. watch individual changes to a list of DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/deploymentconfigs",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.318. watch changes to an object of kind DeploymentConfig",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/deploymentconfigs/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.319. watch individual changes to a list of EgressNetworkPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/egressnetworkpolicies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.320. watch changes to an object of kind EgressNetworkPolicy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/egressnetworkpolicies/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.321. watch individual changes to a list of ImageStream",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/imagestreams",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.322. watch changes to an object of kind ImageStream",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/imagestreams/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.323. watch individual changes to a list of Policy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/policies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.324. watch changes to an object of kind Policy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/policies/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.325. watch individual changes to a list of PolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/policybindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.326. watch changes to an object of kind PolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/policybindings/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.327. watch individual changes to a list of RoleBindingRestriction",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/rolebindingrestrictions",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.329. watch individual changes to a list of Route",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/routes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.330. watch changes to an object of kind Route",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/routes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.331. watch individual changes to a list of Template",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/templates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.332. watch changes to an object of kind Template",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/namespaces/{namespace}/templates/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.333. watch individual changes to a list of NetNamespace",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/netnamespaces",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.334. watch changes to an object of kind NetNamespace",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/netnamespaces/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.335. watch individual changes to a list of OAuthAccessToken",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthaccesstokens",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.336. watch changes to an object of kind OAuthAccessToken",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthaccesstokens/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.337. watch individual changes to a list of OAuthAuthorizeToken",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthauthorizetokens",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.338. watch changes to an object of kind OAuthAuthorizeToken",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthauthorizetokens/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.339. watch individual changes to a list of OAuthClientAuthorization",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthclientauthorizations",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.340. watch changes to an object of kind OAuthClientAuthorization",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthclientauthorizations/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.341. watch individual changes to a list of OAuthClient",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthclients",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.342. watch changes to an object of kind OAuthClient",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/oauthclients/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.343. watch individual changes to a list of Policy",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/policies",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.344. watch individual changes to a list of PolicyBinding",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/policybindings",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.345. watch individual changes to a list of Project",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/projects",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.346. watch changes to an object of kind Project",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/projects/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.347. watch individual changes to a list of RoleBindingRestriction",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/rolebindingrestrictions",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.348. watch individual changes to a list of Route",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/routes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.349. watch individual changes to a list of Template",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/templates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.350. watch individual changes to a list of User",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/users",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "2.2.351. watch changes to an object of kind User",
+    "page": 0,
+    "call": "GET /oapi/v1/watch/users/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.1. get available resources",
+    "page": 0,
+    "call": "GET /api/v1",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.3. list objects of kind ComponentStatus",
+    "page": 0,
+    "call": "GET /api/v1/componentstatuses",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.4. read the specified ComponentStatus",
+    "page": 0,
+    "call": "GET /api/v1/componentstatuses/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.5. list or watch objects of kind ConfigMap",
+    "page": 0,
+    "call": "GET /api/v1/configmaps",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.7. list or watch objects of kind Endpoints",
+    "page": 0,
+    "call": "GET /api/v1/endpoints",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.9. list or watch objects of kind Event",
+    "page": 0,
+    "call": "GET /api/v1/events",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.11. list or watch objects of kind LimitRange",
+    "page": 0,
+    "call": "GET /api/v1/limitranges",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.14. list or watch objects of kind Namespace",
+    "page": 0,
+    "call": "GET /api/v1/namespaces",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.18. list or watch objects of kind ConfigMap",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/configmaps",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.22. read the specified ConfigMap",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/configmaps/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.25. list or watch objects of kind Endpoints",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/endpoints",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.29. read the specified Endpoints",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/endpoints/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.32. list or watch objects of kind Event",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/events",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.36. read the specified Event",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/events/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.39. list or watch objects of kind LimitRange",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/limitranges",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.43. read the specified LimitRange",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/limitranges/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.46. list or watch objects of kind PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/persistentvolumeclaims",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.50. read the specified PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.53. read status of the specified PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.56. list or watch objects of kind Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.60. read the specified Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.62. connect GET requests to attach of Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/attach",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.66. connect GET requests to exec of Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/exec",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.68. read log of the specified Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/log",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.69. connect GET requests to portforward of Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/portforward",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.73. connect GET requests to proxy of Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/proxy",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.79. connect GET requests to proxy of Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.84. read status of the specified Pod",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/pods/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.87. list or watch objects of kind PodTemplate",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/podtemplates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.91. read the specified PodTemplate",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/podtemplates/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.94. list or watch objects of kind ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/replicationcontrollers",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.98. read the specified ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/replicationcontrollers/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.101. read scale of the specified Scale",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.104. read status of the specified ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.107. list or watch objects of kind ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/resourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.111. read the specified ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/resourcequotas/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.114. read status of the specified ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/resourcequotas/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.117. list or watch objects of kind Secret",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/secrets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.121. read the specified Secret",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/secrets/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.124. list or watch objects of kind ServiceAccount",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/serviceaccounts",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.128. read the specified ServiceAccount",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/serviceaccounts/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.130. list or watch objects of kind Service",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/services",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.134. read the specified Service",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/services/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.138. connect GET requests to proxy of Service",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/services/{name}/proxy",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.144. connect GET requests to proxy of Service",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.149. read status of the specified Service",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{namespace}/services/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.153. read the specified Namespace",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.157. read status of the specified Namespace",
+    "page": 0,
+    "call": "GET /api/v1/namespaces/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.160. list or watch objects of kind Node",
+    "page": 0,
+    "call": "GET /api/v1/nodes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.164. read the specified Node",
+    "page": 0,
+    "call": "GET /api/v1/nodes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.168. connect GET requests to proxy of Node",
+    "page": 0,
+    "call": "GET /api/v1/nodes/{name}/proxy",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.174. connect GET requests to proxy of Node",
+    "page": 0,
+    "call": "GET /api/v1/nodes/{name}/proxy/{path}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.179. read status of the specified Node",
+    "page": 0,
+    "call": "GET /api/v1/nodes/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.181. list or watch objects of kind PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/persistentvolumeclaims",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.184. list or watch objects of kind PersistentVolume",
+    "page": 0,
+    "call": "GET /api/v1/persistentvolumes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.188. read the specified PersistentVolume",
+    "page": 0,
+    "call": "GET /api/v1/persistentvolumes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.191. read status of the specified PersistentVolume",
+    "page": 0,
+    "call": "GET /api/v1/persistentvolumes/{name}/status",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.193. list or watch objects of kind Pod",
+    "page": 0,
+    "call": "GET /api/v1/pods",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.195. list or watch objects of kind PodTemplate",
+    "page": 0,
+    "call": "GET /api/v1/podtemplates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.199. proxy GET requests to Pod",
+    "page": 0,
+    "call": "GET /api/v1/proxy/namespaces/{namespace}/pods/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.205. proxy GET requests to Pod",
+    "page": 0,
+    "call": "GET /api/v1/proxy/namespaces/{namespace}/pods/{name}/{path}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.211. proxy GET requests to Service",
+    "page": 0,
+    "call": "GET /api/v1/proxy/namespaces/{namespace}/services/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.217. proxy GET requests to Service",
+    "page": 0,
+    "call": "GET /api/v1/proxy/namespaces/{namespace}/services/{name}/{path}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.223. proxy GET requests to Node",
+    "page": 0,
+    "call": "GET /api/v1/proxy/nodes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.229. proxy GET requests to Node",
+    "page": 0,
+    "call": "GET /api/v1/proxy/nodes/{name}/{path}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.233. list or watch objects of kind ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/replicationcontrollers",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.235. list or watch objects of kind ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/resourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.237. list or watch objects of kind Secret",
+    "page": 0,
+    "call": "GET /api/v1/secrets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.240. list or watch objects of kind SecurityContextConstraints",
+    "page": 0,
+    "call": "GET /api/v1/securitycontextconstraints",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.244. read the specified SecurityContextConstraints",
+    "page": 0,
+    "call": "GET /api/v1/securitycontextconstraints/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.246. list or watch objects of kind ServiceAccount",
+    "page": 0,
+    "call": "GET /api/v1/serviceaccounts",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.248. list or watch objects of kind Service",
+    "page": 0,
+    "call": "GET /api/v1/services",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.250. watch individual changes to a list of ConfigMap",
+    "page": 0,
+    "call": "GET /api/v1/watch/configmaps",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.251. watch individual changes to a list of Endpoints",
+    "page": 0,
+    "call": "GET /api/v1/watch/endpoints",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.252. watch individual changes to a list of Event",
+    "page": 0,
+    "call": "GET /api/v1/watch/events",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.253. watch individual changes to a list of LimitRange",
+    "page": 0,
+    "call": "GET /api/v1/watch/limitranges",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.254. watch individual changes to a list of Namespace",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.255. watch individual changes to a list of ConfigMap",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/configmaps",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.256. watch changes to an object of kind ConfigMap",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/configmaps/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.257. watch individual changes to a list of Endpoints",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/endpoints",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.258. watch changes to an object of kind Endpoints",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/endpoints/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.259. watch individual changes to a list of Event",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/events",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.260. watch changes to an object of kind Event",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/events/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.261. watch individual changes to a list of LimitRange",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/limitranges",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.262. watch changes to an object of kind LimitRange",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/limitranges/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.263. watch individual changes to a list of PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/persistentvolumeclaims",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.264. watch changes to an object of kind PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/persistentvolumeclaims/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.265. watch individual changes to a list of Pod",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/pods",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.266. watch changes to an object of kind Pod",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/pods/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.267. watch individual changes to a list of PodTemplate",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/podtemplates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.268. watch changes to an object of kind PodTemplate",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/podtemplates/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.269. watch individual changes to a list of ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/replicationcontrollers",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.270. watch changes to an object of kind ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/replicationcontrollers/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.271. watch individual changes to a list of ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/resourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.272. watch changes to an object of kind ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/resourcequotas/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.273. watch individual changes to a list of Secret",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/secrets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.274. watch changes to an object of kind Secret",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/secrets/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.275. watch individual changes to a list of ServiceAccount",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/serviceaccounts",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.276. watch changes to an object of kind ServiceAccount",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/serviceaccounts/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.277. watch individual changes to a list of Service",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/services",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.278. watch changes to an object of kind Service",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{namespace}/services/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.279. watch changes to an object of kind Namespace",
+    "page": 0,
+    "call": "GET /api/v1/watch/namespaces/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.280. watch individual changes to a list of Node",
+    "page": 0,
+    "call": "GET /api/v1/watch/nodes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.281. watch changes to an object of kind Node",
+    "page": 0,
+    "call": "GET /api/v1/watch/nodes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.282. watch individual changes to a list of PersistentVolumeClaim",
+    "page": 0,
+    "call": "GET /api/v1/watch/persistentvolumeclaims",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.283. watch individual changes to a list of PersistentVolume",
+    "page": 0,
+    "call": "GET /api/v1/watch/persistentvolumes",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.284. watch changes to an object of kind PersistentVolume",
+    "page": 0,
+    "call": "GET /api/v1/watch/persistentvolumes/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.285. watch individual changes to a list of Pod",
+    "page": 0,
+    "call": "GET /api/v1/watch/pods",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.286. watch individual changes to a list of PodTemplate",
+    "page": 0,
+    "call": "GET /api/v1/watch/podtemplates",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.287. watch individual changes to a list of ReplicationController",
+    "page": 0,
+    "call": "GET /api/v1/watch/replicationcontrollers",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.288. watch individual changes to a list of ResourceQuota",
+    "page": 0,
+    "call": "GET /api/v1/watch/resourcequotas",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.289. watch individual changes to a list of Secret",
+    "page": 0,
+    "call": "GET /api/v1/watch/secrets",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.290. watch individual changes to a list of SecurityContextConstraints",
+    "page": 0,
+    "call": "GET /api/v1/watch/securitycontextconstraints",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.291. watch changes to an object of kind SecurityContextConstraints",
+    "page": 0,
+    "call": "GET /api/v1/watch/securitycontextconstraints/{name}",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.292. watch individual changes to a list of ServiceAccount",
+    "page": 0,
+    "call": "GET /api/v1/watch/serviceaccounts",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  },
+  {
+    "name": "3.2.293. watch individual changes to a list of Service",
+    "page": 0,
+    "call": "GET /api/v1/watch/services",
+    "parameters": [],
+    "responses": [],
+    "consumes": [],
+    "produces": [],
+    "tags": ""
+  }
+]
